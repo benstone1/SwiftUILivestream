@@ -7,14 +7,11 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    let question = "What was the first computer bug?"
-    let possibleAnswers = [
-        "Fly",
-        "Moth",
-        "Ant",
-        "Beetle",
-    ]
+struct GameView: View {
+    let question: Question
+
+    @State var guessedIndex: Int? = nil
+    
     var body: some View {
         ZStack {
             Color(.sRGB, red: 0.7, green: 0.7, blue: 0.5, opacity: 0.2)
@@ -27,27 +24,44 @@ struct ContentView: View {
                 Text("Question 1 / 4")
                     .padding()
                 Spacer()
-                Text(question)
+                Text(question.questionText)
                     .font(.title)
                     .multilineTextAlignment(.center)
                     .padding()
                 Spacer()
                 Spacer()
                 HStack {
-                    ForEach(possibleAnswers.indices) { index in
-                        AnswerButton(text: possibleAnswers[index])
+                    ForEach(question.possibleAnswers.indices) { index in
+                        AnswerButton(text: question.possibleAnswers[index]) {
+                            guessedIndex = index
+                        }
+                        .background(colorForButton(at: index))
+                        .disabled(guessedIndex != nil)
                     }
                 }
-            }
+                if guessedIndex != nil {
+                    BottomText(str: "Next")
+                }
+            }.padding(.bottom)
+        }
+    }
+    
+    func colorForButton(at buttonIndex: Int) -> Color {
+        guard let guessedIndex = guessedIndex, guessedIndex == buttonIndex else { return .clear }
+        if guessedIndex == question.correctAnswerIndex {
+            return .green
+        } else {
+            return .red
         }
     }
 }
 
 struct AnswerButton: View {
     let text: String
+    let onClick: () -> Void
     var body: some View {
         Button(action: {
-            print("You selected \(text)")
+            onClick()
         }) {
             Text(text)
         }
@@ -58,8 +72,6 @@ struct AnswerButton: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
-        ContentView()
-            .preferredColorScheme(.dark)
+        GameView(question: Question.allQuestions[1])
     }
 }
