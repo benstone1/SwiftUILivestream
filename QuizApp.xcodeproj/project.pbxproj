@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F217CACD26CD91CC00E20D1D /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = F217CACC26CD91CC00E20D1D /* Game.swift */; };
+		F217CACF26CD94A300E20D1D /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F217CACE26CD94A300E20D1D /* GameViewModel.swift */; };
 		F250140026BB1CF2008AE532 /* QuizAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25013FF26BB1CF2008AE532 /* QuizAppApp.swift */; };
 		F250140226BB1CF2008AE532 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F250140126BB1CF2008AE532 /* GameView.swift */; };
 		F250140426BB1CF6008AE532 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F250140326BB1CF6008AE532 /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F217CACC26CD91CC00E20D1D /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		F217CACE26CD94A300E20D1D /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		F25013FC26BB1CF2008AE532 /* QuizApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F25013FF26BB1CF2008AE532 /* QuizAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizAppApp.swift; sourceTree = "<group>"; };
 		F250140126BB1CF2008AE532 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
@@ -41,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F217CAD026CD94A800E20D1D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F217CACE26CD94A300E20D1D /* GameViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		F25013F326BB1CF2008AE532 = {
 			isa = PBXGroup;
 			children = (
@@ -61,10 +73,11 @@
 			isa = PBXGroup;
 			children = (
 				F25013FF26BB1CF2008AE532 /* QuizAppApp.swift */,
-				F255613526C45D8100F2DB7A /* Views */,
 				F255613426C45D7500F2DB7A /* Models */,
-				F250140326BB1CF6008AE532 /* Assets.xcassets */,
+				F255613526C45D8100F2DB7A /* Views */,
+				F217CAD026CD94A800E20D1D /* ViewModels */,
 				F250140826BB1CF6008AE532 /* Info.plist */,
+				F250140326BB1CF6008AE532 /* Assets.xcassets */,
 				F250140526BB1CF6008AE532 /* Preview Content */,
 			);
 			path = QuizApp;
@@ -82,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				F255613226C4573400F2DB7A /* Question.swift */,
+				F217CACC26CD91CC00E20D1D /* Game.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -168,7 +182,9 @@
 			files = (
 				F255613326C4573400F2DB7A /* Question.swift in Sources */,
 				F255613726C45DBC00F2DB7A /* BottomText.swift in Sources */,
+				F217CACD26CD91CC00E20D1D /* Game.swift in Sources */,
 				F250140226BB1CF2008AE532 /* GameView.swift in Sources */,
+				F217CACF26CD94A300E20D1D /* GameViewModel.swift in Sources */,
 				F250140026BB1CF2008AE532 /* QuizAppApp.swift in Sources */,
 				F255613B26C460C200F2DB7A /* ControlsView.swift in Sources */,
 				F255613926C4601900F2DB7A /* MainTabView.swift in Sources */,

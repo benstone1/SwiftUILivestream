@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Question {
+struct Question: Hashable {
     let questionText: String
     let possibleAnswers: [String]
     let correctAnswerIndex: Int
