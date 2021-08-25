@@ -17,6 +17,10 @@
 		F255613726C45DBC00F2DB7A /* BottomText.swift in Sources */ = {isa = PBXBuildFile; fileRef = F255613626C45DBC00F2DB7A /* BottomText.swift */; };
 		F255613926C4601900F2DB7A /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F255613826C4601900F2DB7A /* MainTabView.swift */; };
 		F255613B26C460C200F2DB7A /* ControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F255613A26C460C200F2DB7A /* ControlsView.swift */; };
+		F29999D526D6DC5B009BC6FA /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29999D426D6DC5B009BC6FA /* WelcomeView.swift */; };
+		F29999D726D6DC74009BC6FA /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29999D626D6DC74009BC6FA /* ResultsView.swift */; };
+		F29999D926D6DC8C009BC6FA /* GameColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29999D826D6DC8C009BC6FA /* GameColor.swift */; };
+		F29999DB26D6DCC9009BC6FA /* ResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29999DA26D6DCC9009BC6FA /* ResultsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		F255613626C45DBC00F2DB7A /* BottomText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomText.swift; sourceTree = "<group>"; };
 		F255613826C4601900F2DB7A /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		F255613A26C460C200F2DB7A /* ControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsView.swift; sourceTree = "<group>"; };
+		F29999D426D6DC5B009BC6FA /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		F29999D626D6DC74009BC6FA /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
+		F29999D826D6DC8C009BC6FA /* GameColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameColor.swift; sourceTree = "<group>"; };
+		F29999DA26D6DCC9009BC6FA /* ResultsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +57,8 @@
 			isa = PBXGroup;
 			children = (
 				F217CACE26CD94A300E20D1D /* GameViewModel.swift */,
+				F29999D826D6DC8C009BC6FA /* GameColor.swift */,
+				F29999DA26D6DCC9009BC6FA /* ResultsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -107,6 +117,8 @@
 				F255613A26C460C200F2DB7A /* ControlsView.swift */,
 				F250140126BB1CF2008AE532 /* GameView.swift */,
 				F255613626C45DBC00F2DB7A /* BottomText.swift */,
+				F29999D426D6DC5B009BC6FA /* WelcomeView.swift */,
+				F29999D626D6DC74009BC6FA /* ResultsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -183,10 +195,14 @@
 				F255613326C4573400F2DB7A /* Question.swift in Sources */,
 				F255613726C45DBC00F2DB7A /* BottomText.swift in Sources */,
 				F217CACD26CD91CC00E20D1D /* Game.swift in Sources */,
+				F29999DB26D6DCC9009BC6FA /* ResultsViewModel.swift in Sources */,
+				F29999D726D6DC74009BC6FA /* ResultsView.swift in Sources */,
 				F250140226BB1CF2008AE532 /* GameView.swift in Sources */,
+				F29999D526D6DC5B009BC6FA /* WelcomeView.swift in Sources */,
 				F217CACF26CD94A300E20D1D /* GameViewModel.swift in Sources */,
 				F250140026BB1CF2008AE532 /* QuizAppApp.swift in Sources */,
 				F255613B26C460C200F2DB7A /* ControlsView.swift in Sources */,
+				F29999D926D6DC8C009BC6FA /* GameColor.swift in Sources */,
 				F255613926C4601900F2DB7A /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,13 +12,8 @@ struct GameView: View {
     
     var body: some View {
         ZStack {
-            Color(.sRGB, red: 0.7, green: 0.7, blue: 0.5, opacity: 0.2)
-                .ignoresSafeArea()
+            GameColor.main.ignoresSafeArea()
             VStack {
-                Text("Quiz Time!")
-                    .font(.largeTitle)
-                    .foregroundColor(Color.red)
-                    .padding()
                 Text(viewModel.progressText)
                     .padding()
                 Spacer()
@@ -38,12 +33,21 @@ struct GameView: View {
                     }
                 }
                 if viewModel.selectionWasMade {
-                    BottomText(str: "Next") {
-                        viewModel.advanceGameState()
-                    }
+                    Button(action: viewModel.advanceGameState,
+                           label: {
+                            BottomText(str: "Next")
+                    })
                 }
             }.padding(.bottom)
         }
+        .navigationBarHidden(true)
+        .background(resultsNavigationLink)
+    }
+    private var resultsNavigationLink: some View {
+        NavigationLink(
+            destination: ResultsView(viewModel: ResultsViewModel(selectionCount: viewModel.selectionCount, gameStartTime: viewModel.gameStartTime, gameEndTime: Date())),
+            isActive: .constant(viewModel.gameIsOver),
+            label: { EmptyView() })
     }
 }
 
@@ -63,6 +67,8 @@ struct AnswerButton: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        GameView()
+        NavigationView {
+            GameView()
+        }
     }
 }

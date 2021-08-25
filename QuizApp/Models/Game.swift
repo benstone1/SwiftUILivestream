@@ -11,15 +11,29 @@ struct Game {
     
     // MARK: - Private Properties
     
+    var startTime = Date()
+    
     private let questions = Question.allQuestions.shuffled()
     
     private(set) var currentQuestionIndex = 0
     
     private(set) var selections = [Question: Int]()
     
-    private var gameIsOver = false
+    var gameIsOver = false
     
     // MARK: - Internal Methods and Properties
+    
+    var selectionCount: (correct: Int, incorrect: Int) {
+        var count: (correct: Int, incorrect: Int) = (0, 0)
+        for (question, selectedIndex) in selections {
+            if selectedIndex == question.correctAnswerIndex {
+                count.correct += 1
+            } else {
+                count.incorrect += 1
+            }
+        }
+        return count
+    }
     
     var questionCount: Int {
         questions.count

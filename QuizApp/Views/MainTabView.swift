@@ -10,7 +10,7 @@ import SwiftUI
 struct MainTabView: View {
     var body: some View {
         TabView {
-            GameView()
+            WelcomeView()
                 .tabItem { Label("Game", systemImage: "gamecontroller") }
             ControlsView()
                 .tabItem { Label("Controls", systemImage: "gear") }
